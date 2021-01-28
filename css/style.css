@@ -2,6 +2,27 @@ body{
     padding: 100px;
 }
 .submit-area{
+    margin-top: 50px;
+    padding: 40px;
     border-radius: 20px;
     box-shadow: 5px 5px 10px gray;
+}
+#transiction-area{
+    display: none;
+}
+.status{
+    margin: 0 10px;
+    padding: 15px;
+    color: #fff;
+    box-shadow: 5px 5px 40px gray;
+    border-radius: 15px;
+}
+.withdrow{
+    background: #4834d4;
+}
+.deposit{
+    background: #eb4d4b;
+}
+.blance{
+    background: #0fb9b1;
 }
