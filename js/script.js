@@ -17,13 +17,17 @@ depositBtn.addEventListener('click', function () {
     updateAmount('currentDiposit', depositNumber);
     updateAmount('currentBlance', depositNumber);
 
-
     document.getElementById('depositAmount').value = "";
 })
 //Withdrow button handlar 
 const withdrowBtn = document.getElementById('addWithdrow');
 withdrowBtn.addEventListener('click', function () {
     const withdrowNumber = getInputNumber('withdrowAmount');
+
+    updateAmount('currentWithDrow', withdrowNumber);
+    updateAmount('currentBlance', -1 * withdrowNumber);
+
+    document.getElementById('withdrowAmount').value = "";
 })
 
 function getInputNumber(id) {
@@ -32,10 +36,10 @@ function getInputNumber(id) {
     return number;
 }
 
-function updateAmount(id, depositNumber) {
+function updateAmount(id, number) {
     const current = document.getElementById(id).innerText;
     const currentNumber = parseFloat(current);
-    const total = depositNumber + currentNumber;
+    const total = number + currentNumber;
     document.getElementById(id).innerText = total;
 
 }
